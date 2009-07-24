@@ -1,0 +1,6 @@
+site_domain: localhost:4000
+protocol: http
+url_suffix:  .html
+extension_prefix: MY_
+extensions:
+  test

@@ -1,0 +1,51 @@
+>> Writing PID to tmp/pids/thin.pid
+>> Thin web server (v1.2.2 codename I Find Your Lack of Sauce Disturbing)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:3000, CTRL+C to stop
+NoMethodError: undefined method `mtime' for "/Library/Ruby/Gems/1.8/gems/extlib-0.9.12/lib":String
+	/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/reloader.rb:73:in `rotation'
+	/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/reloader.rb:69:in `map'
+	/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/reloader.rb:69:in `rotation'
+	/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/reloader.rb:47:in `reload!'
+	/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/reloader.rb:37:in `call'
+	/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/showexceptions.rb:24:in `call'
+	/Library/Ruby/Gems/1.8/gems/thin-1.2.2/lib/thin/connection.rb:76:in `pre_process'
+	/Library/Ruby/Gems/1.8/gems/thin-1.2.2/lib/thin/connection.rb:74:in `catch'
+	/Library/Ruby/Gems/1.8/gems/thin-1.2.2/lib/thin/connection.rb:74:in `pre_process'
+	/Library/Ruby/Gems/1.8/gems/thin-1.2.2/lib/thin/connection.rb:57:in `process'
+	/Library/Ruby/Gems/1.8/gems/thin-1.2.2/lib/thin/connection.rb:42:in `receive_data'
+	/Library/Ruby/Gems/1.8/gems/eventmachine-0.12.8/lib/eventmachine.rb:242:in `run_machine'
+	/Library/Ruby/Gems/1.8/gems/eventmachine-0.12.8/lib/eventmachine.rb:242:in `run'
+	/Library/Ruby/Gems/1.8/gems/thin-1.2.2/lib/thin/backends/base.rb:57:in `start'
+	/Library/Ruby/Gems/1.8/gems/thin-1.2.2/lib/thin/server.rb:156:in `start'
+	/Library/Ruby/Gems/1.8/gems/thin-1.2.2/lib/thin/controllers/controller.rb:80:in `start'
+	/Library/Ruby/Gems/1.8/gems/thin-1.2.2/lib/thin/runner.rb:174:in `send'
+	/Library/Ruby/Gems/1.8/gems/thin-1.2.2/lib/thin/runner.rb:174:in `run_command'
+	/Library/Ruby/Gems/1.8/gems/thin-1.2.2/lib/thin/runner.rb:140:in `run!'
+	/Library/Ruby/Gems/1.8/gems/thin-1.2.2/bin/thin:6
+	/usr/bin/thin:19:in `load'
+	/usr/bin/thin:19
+NoMethodError: undefined method `mtime' for "/Library/Ruby/Gems/1.8/gems/extlib-0.9.12/lib":String
+	/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/reloader.rb:73:in `rotation'
+	/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/reloader.rb:69:in `map'
+	/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/reloader.rb:69:in `rotation'
+	/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/reloader.rb:47:in `reload!'
+	/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/reloader.rb:37:in `call'
+	/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/showexceptions.rb:24:in `call'
+	/Library/Ruby/Gems/1.8/gems/thin-1.2.2/lib/thin/connection.rb:76:in `pre_process'
+	/Library/Ruby/Gems/1.8/gems/thin-1.2.2/lib/thin/connection.rb:74:in `catch'
+	/Library/Ruby/Gems/1.8/gems/thin-1.2.2/lib/thin/connection.rb:74:in `pre_process'
+	/Library/Ruby/Gems/1.8/gems/thin-1.2.2/lib/thin/connection.rb:57:in `process'
+	/Library/Ruby/Gems/1.8/gems/thin-1.2.2/lib/thin/connection.rb:42:in `receive_data'
+	/Library/Ruby/Gems/1.8/gems/eventmachine-0.12.8/lib/eventmachine.rb:242:in `run_machine'
+	/Library/Ruby/Gems/1.8/gems/eventmachine-0.12.8/lib/eventmachine.rb:242:in `run'
+	/Library/Ruby/Gems/1.8/gems/thin-1.2.2/lib/thin/backends/base.rb:57:in `start'
+	/Library/Ruby/Gems/1.8/gems/thin-1.2.2/lib/thin/server.rb:156:in `start'
+	/Library/Ruby/Gems/1.8/gems/thin-1.2.2/lib/thin/controllers/controller.rb:80:in `start'
+	/Library/Ruby/Gems/1.8/gems/thin-1.2.2/lib/thin/runner.rb:174:in `send'
+	/Library/Ruby/Gems/1.8/gems/thin-1.2.2/lib/thin/runner.rb:174:in `run_command'
+	/Library/Ruby/Gems/1.8/gems/thin-1.2.2/lib/thin/runner.rb:140:in `run!'
+	/Library/Ruby/Gems/1.8/gems/thin-1.2.2/bin/thin:6
+	/usr/bin/thin:19:in `load'
+	/usr/bin/thin:19
+>> Exiting!
