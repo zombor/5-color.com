@@ -7,4 +7,4 @@ directory: logs/
 #  3 - Notices
 #  4 - Debugging
 
-log_threshold: 1
+log_threshold: 0
