@@ -1,4 +1,4 @@
-site_domain: localhost:4000
+site_domain: localhost
 protocol: http
 url_suffix:  .html
 extension_prefix: MY_
