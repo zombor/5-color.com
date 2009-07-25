@@ -13,6 +13,8 @@ module Picombo
 				template = Picombo::View.new('template')
 				body = Picombo::View.new('page/banned')
 
+				body.set('banned', Picombo::Models::Banned)
+
 				template.set('body', body.render(true))
 				template.render
 			end

@@ -50,6 +50,7 @@ module Picombo
 
 			Picombo::Bench.instance.stop('controller_execution')
 			Picombo::Bench.instance.stop('application')
+			Picombo::View.new('bench/footer').render
 
 			Picombo::Core.render
 		end

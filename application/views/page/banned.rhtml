@@ -1,1 +1,21 @@
-<h2>Banned &amp; Restricted</h2>
+<h2>Banned &amp; Restricted (<%= Time.new.year %>/<%= Time.new.month%>)</h2>
+<h3>Banned</h3>
+<table width="100%">
+<% count = 1%>
+<% @banned.all(:status => 'b', :order => [:name.asc]).each do |card| %>
+	<% if count == 1 %><tr><% end %>
+		<td><%= card.name %></td>
+		<% count = count + 1 %>
+	<% if count == 4 %></tr><% count = 1%><% end %>
+<% end %>
+</table>
+<h3>Restricted</h3>
+<table width="100%">
+<% count = 1%>
+<% @banned.all(:status => 'r', :order => [:name.asc]).each do |card| %>
+	<% if count == 1 %><tr><% end %>
+		<td><%= card.name %></td>
+		<% count = count + 1 %>
+	<% if count == 4 %></tr><% count = 1%><% end %>
+<% end %>
+</table>
