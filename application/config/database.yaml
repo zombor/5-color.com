@@ -1,6 +1,6 @@
 default:
- driver: mysql
- host: localhost
- database: 5color
- username: root
- password: Contract1
+ driver: postgres
+ host: 10.251.151.31
+ database: arheuhzksc
+ username: arheuhzksc
+ password: 2AG7TeASqTZQmGvG
