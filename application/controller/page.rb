@@ -18,6 +18,14 @@ module Picombo
 				template.set('body', body.render(true))
 				template.render
 			end
+
+			def contact()
+				template = Picombo::View.new('template')
+				body = Picombo::View.new('page/contact')
+
+				template.set('body', body.render(true))
+				template.render
+			end
 		end
 	end
 end
