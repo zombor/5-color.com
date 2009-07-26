@@ -2,6 +2,8 @@ module Picombo
 	module Controllers
 		class Admin < Picombo::Controllers::Template
 			def remove_banned
+				raise "Must be logged in" unless Picombo::Auth.loggedin?
+
 				if Picombo::Input.instance.post.empty?
 					template = Picombo::View.new('template')
 					body = Picombo::View.new('admin/remove_banned')
@@ -19,6 +21,8 @@ module Picombo
 			end
 
 			def add_card
+				raise "Must be logged in" unless Picombo::Auth.loggedin?
+
 				post = Picombo::Input.instance.post
 				card = Picombo::Models::Banned.new(:name => post['name'], :status => post['status'])
 				card.save

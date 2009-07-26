@@ -14,6 +14,7 @@
 					<li><a href="<%= Picombo::Url.base %>page/banned">Banned &amp; Restricted</a></li>
 					<li><a href="http://forum.5-color.com/">Forums</a></li>
 					<li><a href="<%= Picombo::Url.base %>page/contact">Contact</a></li>
+					<% if Picombo::Auth.loggedin? %><li><a href="<%= Picombo::Url.base %>user/logout">Logout</a></li><% end %>
 				</ul>
 			</div>
 			<div id="page_content">

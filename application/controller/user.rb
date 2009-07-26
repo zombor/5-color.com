@@ -25,14 +25,6 @@ module Picombo
 
 				Picombo::Core.redirect('admin/remove_banned')
 			end
-			
-			def temp
-				user = Picombo::Models::User.get(1)
-				user.password = 'e31601c1270d16084bb07f317345bbc62b27195b'
-				user.save
-				
-				Picombo::Core.redirect('user/login')
-			end
 		end
 	end
 end
