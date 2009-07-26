@@ -16,7 +16,7 @@ module Picombo
 						
 						#Picombo::Core.response(card.inspect)
 					end
-					Picombo::Core.response(Picombo::Input.instance.post)
+					Picombo::Core.response(Picombo::Input.instance.post.inspect)
 					#Picombo::Core.redirect('admin/remove_banned')
 				end
 			end
