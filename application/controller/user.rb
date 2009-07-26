@@ -27,7 +27,7 @@ module Picombo
 			end
 			
 			def temp
-				user = Picombo::Models::User.first(:username => 'zombor')
+				user = Picombo::Models::User.get(1)
 				user.password = 'e31601c1270d16084bb07f317345bbc62b27195b'
 				user.save
 				
