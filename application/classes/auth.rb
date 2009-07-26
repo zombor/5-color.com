@@ -13,14 +13,16 @@ module Picombo
 		def login(user, password)
 			user = Picombo::Models::User.first(:username => user, :password => Digest::SHA1.hexdigest(password))
 
-			if ! user.id.nil?
+			if user
 				# set the session as logged in
 				Picombo::Session.instance.set(:loggedin, true)
 				Picombo::Session.instance.set(:user, user)
 
-				true
+				return true
 			end
-
+			Picombo::Core.response(user.inspect)
+			Picombo::Core.response(user)
+			Picombo::Core.response(Digest::SHA1.hexdigest(password))
 			false
 		end
 

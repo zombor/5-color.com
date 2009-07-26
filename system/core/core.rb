@@ -27,7 +27,7 @@ module Picombo
 			                  :database => Picombo::Config.get('database.default.database'),
 			                  :username => Picombo::Config.get('database.default.username'),
 			                  :password => Picombo::Config.get('database.default.password')})
-
+			DataMapper::Logger.new(STDOUT, :debug)
 			@@response = Rack::Response.new
 			@@response['Content-Type'] = 'text/html'
 			@@response.status = 200
