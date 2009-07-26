@@ -32,7 +32,7 @@ module Picombo
 		end
 
 		def self.loggedin?
-			Picombo::Session.instance.get('loggedin').nil?
+			! Picombo::Session.instance.get('loggedin').nil?
 		end
 	end
 end
