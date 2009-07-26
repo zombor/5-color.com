@@ -12,7 +12,7 @@ module Picombo
 
 		def login(user, password)
 			user = Picombo::Models::User.first(:username => user, :password => Digest::SHA1.hexdigest(password))
-Picombo::Core.response('Tried '+{:username => user, :password => Digest::SHA1.hexdigest(password)}.inspect)
+
 			if ! user.id.nil?
 				# set the session as logged in
 				Picombo::Session.instance.set(:loggedin, true)
@@ -20,7 +20,7 @@ Picombo::Core.response('Tried '+{:username => user, :password => Digest::SHA1.he
 
 				true
 			end
-			Picombo::Core.response(user.inspect)
+
 			false
 		end
 
