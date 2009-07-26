@@ -7,4 +7,4 @@
 		<li><input type="submit" value="Login"></li>
 	</ul>
 </form>
-<%= Picombo::Session.instance.get('loggedin').inspect %>
+<%= Picombo::Auth.loggedin?.inspect %>
