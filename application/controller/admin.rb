@@ -12,7 +12,7 @@ module Picombo
 					template.render
 				else
 					Picombo::Input.instance.post.each do |card_id|
-						card = Picombo::Models::Banned.new(:id => card_id)
+						card = Picombo::Models::Banned[card_id]
 						
 						Picombo::Core.response(card.inspect)
 					end
