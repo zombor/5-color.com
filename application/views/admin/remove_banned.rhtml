@@ -1,0 +1,9 @@
+<h2>Remove Banned/Restricted Cards</h2>
+<form action="<%= Picombo::Url.base%>admin/remove_banned">
+	<ul>
+		<% @banned.all(:status => 'b', :order => [:name.asc]).each do |card| %>
+		<li><input type="checkbox" name="card[<%= card.id %>]" value="<%= card.id %>" /> <%= card.name %></li>
+		<% end %>
+	</ul>
+	<input type="submit" value="Go">
+</form>
