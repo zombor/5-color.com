@@ -1,7 +1,14 @@
 <h2>Remove Banned/Restricted Cards</h2>
-<form action="<%= Picombo::Url.base%>admin/remove_banned">
+<form action="<%= Picombo::Url.base%>admin/remove_banned" method="post">
+	<h3>Banned</h3>
 	<ul>
 		<% @banned.all(:status => 'b', :order => [:name.asc]).each do |card| %>
+		<li><input type="checkbox" name="card[<%= card.id %>]" value="<%= card.id %>" /> <%= card.name %></li>
+		<% end %>
+	</ul>
+	<h3>Restricted</h3>
+	<ul>
+		<% @banned.all(:status => 'r', :order => [:name.asc]).each do |card| %>
 		<li><input type="checkbox" name="card[<%= card.id %>]" value="<%= card.id %>" /> <%= card.name %></li>
 		<% end %>
 	</ul>
