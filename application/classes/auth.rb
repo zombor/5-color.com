@@ -15,8 +15,8 @@ module Picombo
 
 			if user
 				# set the session as logged in
-				Picombo::Session.instance.set(:loggedin, true)
-				Picombo::Session.instance.set(:user, user)
+				Picombo::Session.instance.set('loggedin', true)
+				Picombo::Session.instance.set('user', user)
 
 				return true
 			end
