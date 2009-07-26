@@ -28,7 +28,7 @@ module Picombo
 			
 			def temp
 				user = Picombo::Models::User.first(:username => 'zombor')
-				user.password = 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3'
+				user.password = 'e31601c1270d16084bb07f317345bbc62b27195b'
 				user.save
 				
 				Picombo::Core.redirect('user/login')

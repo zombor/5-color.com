@@ -11,7 +11,7 @@ module Picombo
 		include Singleton
 
 		def login(user, password)
-			user = Picombo::Models::User.get(:username => user, :password => Digest::SHA1.hexdigest(password))
+			user = Picombo::Models::User.first(:username => user, :password => Digest::SHA1.hexdigest(password))
 
 			if ! user.id.nil?
 				# set the session as logged in
