@@ -12,12 +12,9 @@ module Picombo
 					template.render
 				else
 					Picombo::Input.instance.post('card').each do |card_id|
-						card = Picombo::Models::Banned.get(card_id[0])
-
-						Picombo::Core.response(card.inspect)
+						card = Picombo::Models::Banned.get(card_id[0]).destroy
 					end
-					#Picombo::Core.response(Picombo::Input.instance.post.inspect)
-					#Picombo::Core.redirect('admin/remove_banned')
+					Picombo::Core.redirect('admin/remove_banned')
 				end
 			end
 		end
