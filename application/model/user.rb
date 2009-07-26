@@ -1,6 +1,6 @@
 module Picombo
 	module Models
-		class Banned < Picombo::Model
+		class User < Picombo::Model
 			property :id,		Serial
 			property :username,	String
 			property :password,	String

@@ -123,6 +123,7 @@ module Picombo
 
 		klass = const_get(name)
 		return klass if klass
+		raise LoadError
 	end
 
 	module Models
@@ -132,6 +133,7 @@ module Picombo
 			require 'model/'+str_name.downcase
 			klass = const_get(name)
 			return klass if klass
+			raise LoadError
 		end
 	end
 
@@ -142,6 +144,7 @@ module Picombo
 			require 'controller/'+str_name.downcase
 			klass = const_get(name)
 			return klass if klass
+			raise LoadError
 		end
 	end
 end
