@@ -1,6 +1,6 @@
 module Picombo
 	module Controllers
-		class Admin < Picombo::Controllers::Template
+		class User < Picombo::Controllers::Template
 			def login
 				template = Picombo::View.new('template')
 				body = Picombo::View.new('user/login')
