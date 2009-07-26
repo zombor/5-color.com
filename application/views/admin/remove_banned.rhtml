@@ -12,5 +12,14 @@
 		<li><input type="checkbox" name="card[<%= card.id %>]" value="<%= card.id %>" /> <%= card.name %></li>
 		<% end %>
 	</ul>
-	<input type="submit" value="Go">
+	<input type="submit" value="Go" />
+</form>
+
+<h2>Add card to list</h2>
+<form action="<%= Picombo::Url.base%>admin/add_card" method="post">
+	<ul>
+		<li><label for="name">Card Name:</label> <input type="input" name="name" /></li>
+		<li><label for="status">Card Status:</label> <select name="status"><option value="b">Banned</option><option value="r">Restricted</option></select></li>
+		<li><input type="submit" value="Go" /></li>
+	</ul>
 </form>

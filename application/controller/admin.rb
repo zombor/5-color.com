@@ -17,6 +17,14 @@ module Picombo
 					Picombo::Core.redirect('admin/remove_banned')
 				end
 			end
+
+			def add_card()
+				post = Picombo::Input.instance.post
+				card = Picombo::Models::Banned.new(:name => post['name'], :status => post['status'])
+				card.save
+
+				Picombo::Core.redirect('admin/remove_banned')
+			end
 		end
 	end
 end
