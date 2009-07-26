@@ -1,4 +1,5 @@
 <h2>User Login</h2>
+<% if ! @error.empty? %><p><%= @error %></p><% end %>
 <form action="<%= Picombo::Url.base%>user/login" method="post">
 	<ul>
 		<li><label for="username">Username:</label> <input name="username" /></li>
