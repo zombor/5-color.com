@@ -11,7 +11,11 @@ module Picombo
 					template.set('body', body.render(true))
 					template.render
 				else
-					Picombo::Core.response(Picombo::Input.instance.post.inspect)
+					Picombo::Input.instance.post.each do |card_id|
+						Picombo::Models::Banned.new(:id => card_id).destroy
+					end
+
+					Picombo::Core.redirect('admin/remove_banned')
 				end
 			end
 		end
