@@ -31,7 +31,7 @@ module Picombo
 			Picombo::Session.instance.unset('user')
 		end
 
-		def self.loggedin?
+		def self.logged_in?
 			! Picombo::Session.instance.get('loggedin').nil?
 		end
 	end
