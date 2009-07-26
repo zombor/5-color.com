@@ -1,7 +1,7 @@
 module Picombo
 	module Controllers
 		class Admin < Picombo::Controllers::Template
-			def remove_banned()
+			def remove_banned
 				if Picombo::Input.instance.post.empty?
 					template = Picombo::View.new('template')
 					body = Picombo::View.new('admin/remove_banned')
@@ -18,7 +18,7 @@ module Picombo
 				end
 			end
 
-			def add_card()
+			def add_card
 				post = Picombo::Input.instance.post
 				card = Picombo::Models::Banned.new(:name => post['name'], :status => post['status'])
 				card.save

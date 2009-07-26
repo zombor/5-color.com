@@ -17,5 +17,9 @@ module Picombo
 		def set(key, val)
 			@@req.session[key] = val
 		end
+		
+		def unset(key)
+			@@req.session[key] = nil
+		end
 	end
 end
