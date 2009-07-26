@@ -20,7 +20,7 @@ module Picombo
 
 				true
 			end
-
+			Picombo::Core.response(user.inspect)
 			false
 		end
 
