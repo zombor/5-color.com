@@ -19,9 +19,7 @@ module Picombo
 			end
 
 			def logout
-				post = Picombo::Input.instance.post
-				card = Picombo::Models::Banned.new(:name => post['name'], :status => post['status'])
-				card.save
+				Picombo::Auth.instance.logout
 
 				Picombo::Core.redirect('admin/remove_banned')
 			end
