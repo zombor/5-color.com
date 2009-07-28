@@ -20,9 +20,7 @@ module Picombo
 
 				return true
 			end
-			Picombo::Core.response(user.inspect)
-			Picombo::Core.response(user)
-			Picombo::Core.response(Digest::SHA1.hexdigest(password))
+
 			false
 		end
 
