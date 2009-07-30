@@ -21,13 +21,13 @@ module Picombo
 			end
 
 			# Set up database
-			DataMapper.setup(:default,
-			                 {:host => Picombo::Config.get('database.default.host'),
-			                  :adapter => Picombo::Config.get('database.default.driver'),
-			                  :database => Picombo::Config.get('database.default.database'),
-			                  :username => Picombo::Config.get('database.default.username'),
-			                  :password => Picombo::Config.get('database.default.password')})
-			DataMapper::Logger.new(STDOUT, :debug)
+			#DataMapper.setup(:default,
+			#                 {:host => Picombo::Config.get('database.default.host'),
+			#                  :adapter => Picombo::Config.get('database.default.driver'),
+			#                  :database => Picombo::Config.get('database.default.database'),
+			#                  :username => Picombo::Config.get('database.default.username'),
+			#                  :password => Picombo::Config.get('database.default.password')})
+			#DataMapper::Logger.new(STDOUT, :debug)
 			@@response = Rack::Response.new
 			@@response['Content-Type'] = 'text/html'
 			@@response.status = 200
