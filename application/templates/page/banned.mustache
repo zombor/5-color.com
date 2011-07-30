@@ -1,0 +1,17 @@
+<h2>Banned &amp; Restricted ({{#date}}{{year}}/{{month}}{{/date}})</h2>
+<h3>Banned</h3>
+<table width="100%">
+	{{#banned}}<tr>
+		{{#row}}
+			<td>{{name}}</td>
+		{{/row}}
+	</tr>{{/banned}}
+</table>
+<h3>Restricted</h3>
+<table width="100%">
+	{{#restricted}}<tr>
+		{{#row}}
+			<td>{{name}}</td>
+		{{/row}}
+	</tr>{{/restricted}}
+</table>
