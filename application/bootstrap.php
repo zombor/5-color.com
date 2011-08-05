@@ -65,7 +65,7 @@ if (isset($_SERVER['KOHANA_ENV']))
 {
 	Kohana::$environment = constant('Kohana::'.strtoupper($_SERVER['KOHANA_ENV']));
 }
-
+die(var_dump(`ls -l`));
 /**
  * Initialize Kohana, setting the default options.
  *
@@ -81,14 +81,14 @@ if (isset($_SERVER['KOHANA_ENV']))
  */
 Kohana::init(array(
 	'base_url'   => '/',
-	'cache_dir' => '/shared/cache',
+	'cache_dir' => 'shared/cache',
 	'caching'   => TRUE,
 ));
 
 /**
  * Attach the file write to logging. Multiple writers are supported.
  */
-Kohana::$log->attach(new Log_File('/shared/logs'));
+Kohana::$log->attach(new Log_File('shared/logs'));
 
 /**
  * Attach a file reader to config. Multiple readers are supported.
