@@ -1,11 +1,6 @@
 ################################################
 ## GENERAL SETTINGS
 ################################################
-shared_writable_dirs:
-    - /application/logs
-    - /application/cache
-url_rewrites:
-    - .* index.php/$0
  
  
 ################################################
