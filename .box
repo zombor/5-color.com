@@ -1,0 +1,16 @@
+################################################
+## GENERAL SETTINGS
+################################################
+shared_writable_dirs:
+    - /application/logs
+    - /application/cache
+url_rewrites:
+    - .* index.php/$0
+ 
+ 
+################################################
+## WEB SPECIFIC SETTINGS
+################################################
+document_root: /docroot
+index_list: [index.html, index.php]
+default_gateway: index.php
