@@ -21,6 +21,8 @@ class Controller_Page extends Controller
 
 		if (class_exists($klass))
 		{
+			$body = (string) new $klass;
+			$body.=View::factory('profiler/stats');
 			$this->response->body(new $klass);
 		}
 		else
