@@ -82,6 +82,7 @@ if (isset($_SERVER['KOHANA_ENV']))
 Kohana::init(array(
 	'base_url'   => '/',
 	'cache_dir' => '/shared/cache',
+	'caching'   => TRUE,
 ));
 
 /**
