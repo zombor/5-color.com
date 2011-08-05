@@ -23,7 +23,7 @@ class Controller_Page extends Controller
 		{
 			$body = (string) new $klass;
 			$body.=View::factory('profiler/stats');
-			$this->response->body(new $klass);
+			$this->response->body($body);
 		}
 		else
 		{
