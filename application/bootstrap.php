@@ -81,12 +81,13 @@ if (isset($_SERVER['KOHANA_ENV']))
  */
 Kohana::init(array(
 	'base_url'   => '/',
+	'cache_dir' => '/shared/cache',
 ));
 
 /**
  * Attach the file write to logging. Multiple writers are supported.
  */
-Kohana::$log->attach(new Log_File(APPPATH.'logs'));
+Kohana::$log->attach(new Log_File('/shared/logs'));
 
 /**
  * Attach a file reader to config. Multiple readers are supported.
